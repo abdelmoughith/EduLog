@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homework_navigation"
+    app:startDestination="@id/navigation_homework">
+    <fragment
+        android:id="@+id/navigation_homework"
+        android:name="com.example.edulog.ui.homework.HomeWorkFragment"
+        android:label="@string/title_homework"
+        tools:layout="@layout/fragment_home_work" >
+        <action
+            android:id="@+id/action_navigation_home_self"
+            app:destination="@id/navigation_homework" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_people"
+        android:name="com.example.edulog.ui.people.PeopleFragment"
+        android:label="@string/title_people"
+        tools:layout="@layout/fragment_account" />
+</navigation>
