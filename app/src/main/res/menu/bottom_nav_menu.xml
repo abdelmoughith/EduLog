@@ -7,7 +7,10 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
-
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/ic_addbox"
+        android:title="@string/title_addbox" />
     <item
         android:id="@+id/navigation_account"
         android:icon="@drawable/ic_account_24dp"

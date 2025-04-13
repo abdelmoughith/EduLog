@@ -14,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.edulog.databinding.ActivityMainBinding;
+import com.example.edulog.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
             return NavigationUI.onNavDestinationSelected(item, Navigation.findNavController(this, R.id.fragment));
         });
          */
+        //startActivity(new Intent(this, LoginActivity.class));
     }
 }
