@@ -8,14 +8,14 @@
     tools:context=".ui.home.HomeFragment"
     android:paddingStart="10dp"
     android:paddingEnd="10dp"
-    android:background="@color/gray"
+    android:background="@color/gray1"
     >
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/logotitle"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         android:layout_marginStart="0dp"
@@ -31,69 +31,58 @@
     </androidx.cardview.widget.CardView>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+    <EditText
+        android:id="@+id/searchEditText"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:boxStrokeColor="@color/black"
-        app:boxStrokeWidth="1dp"
-        app:endIconMode="custom"
-        app:boxBackgroundMode="outline"
-        app:endIconDrawable="@drawable/filter"
-        app:startIconDrawable="@drawable/ic_search"
-        android:layout_marginTop="-10dp"
-        android:layout_marginStart="55dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:startIconTint="@color/gray"
-        app:endIconTint="@color/gray2"
-        app:layout_constraintTop_toTopOf="@id/logotitle"
-        app:layout_constraintStart_toEndOf="@id/logotitle"
-        app:layout_constraintBottom_toBottomOf="@+id/logotitle"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/search_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Search"
-            android:background="@drawable/input_text2"
-            android:inputType="text"
-            android:imeOptions="actionSearch"
-            android:maxLines="1"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/titleList"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayout"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
         android:layout_height="40dp"
-        tools:listitem="@layout/item_menu_group"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="horizontal"
-        />
+        android:layout_marginStart="5dp"
+        android:hint="Search"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawableTint="@color/gray1"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:background="@drawable/input_text2"
+        android:inputType="text"
+        android:textColor="@color/gray3"
+        android:textColorHint="@color/gray1"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:singleLine="true"
+        app:layout_constraintStart_toEndOf="@id/logotitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logotitle"
+        app:layout_constraintBottom_toBottomOf="@id/logotitle"/>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="120dp"
-        app:layout_constraintTop_toBottomOf="@id/titleList"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_marginTop="65dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/subjectsList"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:itemCount="10"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
-            tools:listitem="@layout/item_subject"
-            />
+            >
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/titleList"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                tools:listitem="@layout/item_menu_group"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subjectsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="10"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_subject"
+                />
+        </LinearLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

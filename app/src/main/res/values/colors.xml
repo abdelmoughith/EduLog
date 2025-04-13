@@ -3,9 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#FF1D8555</color>
-    <color name="gray">#DCDCDC</color>
-    <color name="gray3">#EBEBEB</color>
-    <color name="gray2">#313131</color>
+    <color name="gray0">#EBEBEB</color>
+    <color name="gray1">#DCDCDC</color>
+    <color name="gray2">#ADADAD</color>
+    <color name="gray3">#313131</color>
     <color name="red">#FF0000</color>
-    <color name="whitegray">#E9F0F0F0</color>
+    <color name="whitegray">#E9F8F8F8</color>
 </resources>

@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,19 +20,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.edulog.R;
-import com.example.edulog.databinding.FragmentAccountBinding;
 import com.example.edulog.databinding.FragmentHomeWorkBinding;
-import com.example.edulog.entity.HomeWork;
-import com.example.edulog.ui.account.AccountViewModel;
-import com.example.edulog.ui.home.subject.TitleAdapter;
-import com.example.edulog.ui.subjectActivity.HomeWorkAdapter;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomeWorkFragment extends Fragment {
     private FragmentHomeWorkBinding binding;

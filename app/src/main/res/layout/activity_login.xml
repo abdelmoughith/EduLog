@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginActivity"
-    android:background="@color/gray3">
+    android:background="@color/gray0">
 
 
     <TextView
@@ -102,41 +102,16 @@
                 app:hintEnabled="true">
 
                 <AutoCompleteTextView
-                    android:id="@+id/school_spinner"
+                    android:id="@+id/user_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:padding="16dp"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:hint="School"
+                    android:hint="User"
                     android:textStyle="bold"
                     android:inputType="none"
                     android:focusable="false" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxStrokeColor="@color/green"
-                app:boxStrokeWidth="1dp"
-                app:hintEnabled="true"
-                android:hint="User">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/user"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:padding="16dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:inputType="none"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -172,7 +147,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@drawable/input_button"
-                android:text="LOGIN" />
+                android:text="LOGIN"
+                android:textColor="@color/white"/>
             <ProgressBar
                 android:id="@+id/loading"
                 android:layout_width="match_parent"
@@ -183,8 +159,8 @@
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account? Sign up now"
-                android:textColor="@color/gray2"
+                android:text="Forgot Password ?"
+                android:textColor="@color/gray3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

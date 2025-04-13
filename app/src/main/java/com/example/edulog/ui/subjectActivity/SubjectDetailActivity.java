@@ -25,6 +25,8 @@ public class SubjectDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivitySubjectDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // Initialize the ViewModel
         homeWorkViewModel = new ViewModelProvider(this).get(HomeWorkViewModel.class);
@@ -37,9 +39,6 @@ public class SubjectDetailActivity extends AppCompatActivity {
         // Pass the data to the ViewModel
         homeWorkViewModel.setSubject(subject);
         homeWorkViewModel.setCover(cover);
-
-        binding = ActivitySubjectDetailBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
         BottomNavigationView navView = binding.navView;
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(

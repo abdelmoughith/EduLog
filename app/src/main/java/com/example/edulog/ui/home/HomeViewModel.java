@@ -28,9 +28,10 @@ public class HomeViewModel extends ViewModel {
     public LiveData<List<Subject>> getSubjects() {
         Teacher ayoub = new Teacher("Ayoub Charef");
         Teacher chaimae = new Teacher("Chaimae Hasman");
+        Teacher driss = new Teacher("Driss Essabbar");
         List<Subject> subjectList = List.of(
                 new Subject(4, "BIG DATA", 31,false, "4IIR - G5", chaimae, "bigdata"),
-                new Subject(5, "Génie Logiciel",  32,false, "4IIR - G5", ayoub, "glogiciel"),
+                new Subject(5, "Génie Logiciel",  32,false, "4IIR - G5", driss, "glogiciel"),
                 new Subject(6, "Entrepreneuriat", 32,false, "4IIR - G5", ayoub, "entrepreneuriat"),
                 new Subject(7, "Administration Windows",  32,false, "4IIR - G5", chaimae, "windows"),
                 new Subject(8, "Administration ORACLE 2", 32,false, "4IIR - G5", chaimae, "oracle"),

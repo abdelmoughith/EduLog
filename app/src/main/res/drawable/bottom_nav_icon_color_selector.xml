@@ -10,6 +10,6 @@
         android:color="@color/green"
         />
     <item
-        android:color="@color/gray2"
+        android:color="@color/gray3"
         />
 </selector>

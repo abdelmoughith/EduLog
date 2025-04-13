@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.subjectActivity.SubjectDetailActivity"
     android:padding="5dp"
-    android:background="@color/gray">
+    android:background="@color/gray0">
 
     <!-- NestedScrollView to enable scrolling for both CardView and RecyclerView -->
     <androidx.core.widget.NestedScrollView
@@ -42,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/gradient_overlay"
-                        android:alpha="0.5" />
+                        android:alpha="0.7" />
 
                     <TextView
                         android:id="@+id/title"
@@ -61,13 +61,20 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-            <TextView
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@drawable/item"
-                android:text="Announce something to your class"
-                android:gravity="center"
-                android:textAlignment="center"/>
+                app:cardCornerRadius="5dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Announce something to your class"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+            </androidx.cardview.widget.CardView>
+
 
 
 
@@ -76,6 +83,7 @@
                 android:id="@+id/homeworks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 tools:itemCount="10"
                 android:orientation="vertical"
                 tools:listitem="@layout/item_homework" />
