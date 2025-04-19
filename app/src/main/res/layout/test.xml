@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray0"
+    android:padding="24dp"
+    tools:context=".ui.account.AccountFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:id="@+id/profile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="32dp" />
+        <!-- Card Container -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            >
+
+            <!-- Full Name -->
+            <TextView
+                android:id="@+id/full_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textColor="@color/greendark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/full_name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/greendark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/email_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="john.doe@example.com"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/school_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="School"
+                android:textColor="@color/greendark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/school_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ecole marocaine des sciences de l'ingénieur - marrakech"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/role_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="School"
+                android:textColor="@color/greendark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/role_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+        <!-- Edit Button -->
+        <Button
+            android:id="@+id/request_update_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Request Update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/greendark"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginTop="16dp"
+            app:strokeColor="@color/red"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/request_update_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </LinearLayout>
+
+
+
+</ScrollView>

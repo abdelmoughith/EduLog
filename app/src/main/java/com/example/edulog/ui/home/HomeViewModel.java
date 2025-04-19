@@ -51,10 +51,11 @@ public class HomeViewModel extends ViewModel {
     }
     public LiveData<List<String>> getSubjectsTitle() {
         List<String> strings = List.of(
-                "4IIR",
-                "3IIR",
-                "2AP",
-                "1AP"
+                "Undone",
+                "4IIR - G5",
+                "3IIR - G5",
+                "2AP - G2",
+                "1AP - G2"
         );
         subjectsTitle.setValue(strings);
         return subjectsTitle;

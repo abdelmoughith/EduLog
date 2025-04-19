@@ -1,93 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.subjectActivity.SubjectDetailActivity"
-    android:padding="5dp"
     android:background="@color/gray0">
 
-    <!-- NestedScrollView to enable scrolling for both CardView and RecyclerView -->
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/custom_toolbar" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            tools:context=".ui.subjectActivity.SubjectDetailActivity"
+            android:padding="5dp"
+            android:background="@color/gray0">
 
-            <!-- CardView placed at the top, will scroll with RecyclerView -->
-            <androidx.cardview.widget.CardView
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginBottom="10dp">
+                android:layout_height="match_parent"
+                android:fillViewport="true">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/logoImage"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@raw/logo" />
+                        android:layout_height="150dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="10dp">
 
-                    <View
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/logoImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@raw/logo" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gradient_overlay"
+                                android:alpha="0.7" />
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:text="Développement mobile"
+                                android:textColor="@color/fixedwhite"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient_overlay"
-                        android:alpha="0.7" />
+                        android:layout_height="70dp"
+                        app:cardCornerRadius="5dp">
 
-                    <TextView
-                        android:id="@+id/title"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Announce something to your class"
+                            android:gravity="center"
+                            android:textAlignment="center" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/homeworks"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:padding="10dp"
-                        android:singleLine="true"
-                        android:text="Développement mobile"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        android:layout_marginTop="5dp"
+                        tools:itemCount="10"
+                        android:orientation="vertical"
+                        tools:listitem="@layout/item_homework" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                app:cardCornerRadius="5dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Announce something to your class"
-                    android:gravity="center"
-                    android:textAlignment="center"/>
-            </androidx.cardview.widget.CardView>
+    <!-- FABs Layer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="20dp">
 
+        <!-- Option FABs -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="200dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_back"
+            app:backgroundTint="@color/gray0"
+            app:tint="@color/black"/>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="140dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_search"
+            app:backgroundTint="@color/gray0"
+            app:tint="@color/black"/>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_homework"
+            app:backgroundTint="@color/gray0"
+            app:tint="@color/black"/>
 
-            <!-- RecyclerView, which will scroll under the CardView -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/homeworks"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                tools:itemCount="10"
-                android:orientation="vertical"
-                tools:listitem="@layout/item_homework" />
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+        <!-- Main FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_addbox"
+            app:backgroundTint="@color/greendark"
+            app:tint="@color/white" />
 
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+</FrameLayout>

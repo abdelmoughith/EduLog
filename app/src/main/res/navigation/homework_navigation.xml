@@ -20,5 +20,5 @@
         android:id="@+id/navigation_people"
         android:name="com.example.edulog.ui.people.PeopleFragment"
         android:label="@string/title_people"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_people" />
 </navigation>

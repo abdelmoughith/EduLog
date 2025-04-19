@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/greendark"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        android:elevation="4dp">
+
+        <!-- App logo or title on the left -->
+        <LinearLayout
+            android:id="@+id/part1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                app:tint="@color/fixedwhite"
+                android:contentDescription="Go back"
+                android:layout_gravity="start"
+                android:paddingStart="0dp"
+                android:paddingEnd="8dp" />
+
+            <!-- Search EditText (initially gone) -->
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:hint="Search"
+                android:background="@drawable/input_text2"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray2"
+                android:visibility="invisible" />
+
+            <!-- Search icon -->
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                android:layout_gravity="end"
+                android:padding="16dp"
+                android:contentDescription="Search" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/part2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/back2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                app:tint="@color/fixedwhite"
+                android:contentDescription="Go back"
+                android:layout_gravity="start"
+                android:paddingStart="0dp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:id="@+id/subjectTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/fixedwhite"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+</layout>

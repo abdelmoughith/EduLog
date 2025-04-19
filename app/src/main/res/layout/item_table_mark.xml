@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    >
+    <TextView
+        android:id="@+id/finalMark"
+        android:textColor="@color/gray3"
+        android:textStyle="bold"
+        android:text="Final Mark: 15.82"
+        android:textSize="19sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/gray3"
+        android:textStyle="bold"
+        android:text="Homeworks:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/finalMark"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:stretchColumns="1">
+
+        <!--
+        <TableRow android:background="@color/green">
+            <TextView
+                android:layout_width="0dp"
+                android:text="HomeWork"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:background="@drawable/cell_header"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:text="Mark"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:background="@drawable/cell_header"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="DevOps: Git TP"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:background="@drawable/cell_body"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="18.50/20"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:background="@drawable/cell_body"
+                android:layout_weight="1"/>
+        </TableRow>
+
+-->
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

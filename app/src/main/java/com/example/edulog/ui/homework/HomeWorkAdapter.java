@@ -2,6 +2,7 @@ package com.example.edulog.ui.homework;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.edulog.R;
 import com.example.edulog.entity.HomeWork;
+import com.example.edulog.ui.createHW.CreateHWActivity;
+import com.example.edulog.ui.pushhomework.PushHomeWorkActivity;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -53,7 +56,7 @@ public class HomeWorkAdapter extends RecyclerView.Adapter<HomeWorkAdapter.VH> {
             popupMenu.inflate(R.menu.more_info_item);
             popupMenu.setOnMenuItemClickListener(menuItem -> {
                 if (menuItem.getItemId() == R.id.menu_edit) {
-                    Toast.makeText(context, "Edit: " + menuItem, Toast.LENGTH_SHORT).show();
+                    context.startActivity(new Intent(context, CreateHWActivity.class));
                     return true;
                 } else if (menuItem.getItemId() == R.id.menu_delete) {
                     Toast.makeText(context, "Delete: " + menuItem, Toast.LENGTH_SHORT).show();
@@ -61,9 +64,13 @@ public class HomeWorkAdapter extends RecyclerView.Adapter<HomeWorkAdapter.VH> {
                 } else {
                     return false;
                 }
-
             });
             popupMenu.show();
+        });
+        holder.itemView.setOnClickListener(v->{
+            Intent intent = new Intent(context, PushHomeWorkActivity.class);
+            intent.putExtra("title", homeWork.getName());
+            context.startActivity(intent);
         });
 
     }

@@ -44,7 +44,7 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.VH> {
             holder.textView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.white));
         } else {
             holder.constraintLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.items_background));
-            holder.textView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.green));
+            holder.textView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.black));
         }
         holder.itemView.setOnClickListener(v -> {
             if (focusedPosition == position) {

@@ -3,9 +3,13 @@
     <style name="Base.Theme.EduLog" parent="Theme.Material3.DayNight.NoActionBar">
 
         <item name="colorPrimary">@color/green</item>
-        
+        <item name="colorPrimaryDark">@color/greendark</item><!-- top bar of clock battery -->
+
         <item name="android:textColorHighlight">@color/green</item>
         <item name="colorAccent">@color/green</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
     </style>
 
     <style name="Theme.EduLog" parent="Base.Theme.EduLog" />

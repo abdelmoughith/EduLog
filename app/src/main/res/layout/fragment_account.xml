@@ -1,20 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray0"
+    android:fillViewport="true"
     tools:context=".ui.account.AccountFragment">
 
-    <TextView
-        android:id="@+id/textAccount"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Title -->
+        <TextView
+            android:id="@+id/profile_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="32dp"
+            android:gravity="center" />
+
+        <!-- Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Existing Info (Full Name, Email, School, Role) -->
+                <TextView
+                    android:id="@+id/full_name_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textColor="@color/greendark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/full_name_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Abdelmoughith Lemkhentar"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/email_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="@color/greendark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/email_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Abdelmoughith.Lemkhentar@emsi-edu.ma"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/school_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="School"
+                    android:textColor="@color/greendark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/school_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ecole marocaine des sciences de l'ingénieur - Marrakech"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/role_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Role"
+                    android:textColor="@color/greendark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/role_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- More Info (Initially Hidden) -->
+                <LinearLayout
+                    android:id="@+id/more_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- Age -->
+                    <TextView
+                        android:id="@+id/age_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/age_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="23"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Registration Number -->
+                    <TextView
+                        android:id="@+id/registration_number_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registration Number"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/registration_number_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="M3-642-245"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Class -->
+                    <TextView
+                        android:id="@+id/class_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Class"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/class_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4IIR - G5"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Date of Birth -->
+                    <TextView
+                        android:id="@+id/dob_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Birth"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dob_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2002-03-15"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Phone Number -->
+                    <TextView
+                        android:id="@+id/phone_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/phone_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0644387229"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Nationality -->
+                    <TextView
+                        android:id="@+id/nationality_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nationality"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/nationality_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Moroccan"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Address -->
+                    <TextView
+                        android:id="@+id/address_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="@color/greendark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/address_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="123 Rue de l'Université, Marrakech"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Show More Button -->
+        <Button
+            android:id="@+id/showMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show More"
+            android:textAllCaps="false"
+            android:textColor="@color/fixedwhite"
+            android:backgroundTint="@color/greendark"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="12dp" />
+
+        <Button
+            android:id="@+id/showMark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Marks"
+            android:textAllCaps="false"
+            android:textColor="@color/fixedwhite"
+            android:backgroundTint="@color/greendark"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="12dp" />
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginTop="16dp"
+            app:strokeColor="@color/red"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+</ScrollView>
