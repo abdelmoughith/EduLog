@@ -6,6 +6,7 @@ import static android.view.View.VISIBLE;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -28,6 +29,9 @@ import android.widget.TextView;
 
 import com.example.edulog.databinding.FragmentHomeWorkBinding;
 import com.example.edulog.databinding.ToolbarBinding;
+import com.example.edulog.ui.createHW.CreateHWActivity;
+import com.example.edulog.ui.pushMark.PushMarkActivity;
+import com.example.edulog.ui.subjectActivity.SubjectDetailActivity;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -151,15 +155,24 @@ public class HomeWorkFragment extends Fragment {
     private boolean isFabMenuOpen = false;
     private void setupFabMenu() {
         FloatingActionButton fabMain = binding.fabMain;
-        FloatingActionButton fab1 = binding.fabOption1;
+        //FloatingActionButton fab1 = binding.fabOption1;
         FloatingActionButton fab2 = binding.fabOption2;
         FloatingActionButton fab3 = binding.fabOption3;
 
+        fab2.setOnClickListener(v -> {
+            Intent intent2 = new Intent(getContext(), CreateHWActivity.class);
+            startActivity(intent2);
+        });
+        fab3.setOnClickListener(v -> {
+            Intent intent2 = new Intent(getContext(), PushMarkActivity.class);
+            startActivity(intent2);
+        });
+
         fabMain.setOnClickListener(v -> {
             if (!isFabMenuOpen) {
-                showFabMenu(fab1, fab2, fab3);
+                showFabMenu(fab2, fab3);
             } else {
-                closeFabMenu(fab1, fab2, fab3);
+                closeFabMenu(fab2, fab3);
             }
             isFabMenuOpen = !isFabMenuOpen;
         });

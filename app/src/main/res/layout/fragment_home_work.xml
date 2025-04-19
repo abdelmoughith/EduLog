@@ -95,7 +95,10 @@
                         tools:itemCount="10"
                         android:orientation="vertical"
                         tools:listitem="@layout/item_homework" />
-
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -107,28 +110,29 @@
         android:layout_height="match_parent"
         android:layout_marginEnd="20dp">
 
-        <!-- Option FABs -->
+        <!-- Option FABs
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="200dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="80dp"
             android:visibility="gone"
             android:src="@drawable/ic_back"
             app:backgroundTint="@color/gray0"
-            app:tint="@color/black"/>
+            app:tint="@color/black" />
+            -->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabOption2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="140dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="90dp"
+            android:layout_marginEnd="7dp"
             android:visibility="gone"
-            android:src="@drawable/ic_search"
+            android:src="@drawable/ic_homework"
             app:backgroundTint="@color/gray0"
             app:tint="@color/black"/>
 
@@ -137,12 +141,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="80dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="90dp"
             android:visibility="gone"
-            android:src="@drawable/ic_homework"
-            app:backgroundTint="@color/gray0"
-            app:tint="@color/black"/>
+            android:src="@drawable/ic_mark"
+            app:backgroundTint="@color/gray0" />
 
         <!-- Main FAB -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -150,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
+            android:layout_margin="10dp"
             android:src="@drawable/ic_addbox"
             app:backgroundTint="@color/greendark"
             app:tint="@color/white" />

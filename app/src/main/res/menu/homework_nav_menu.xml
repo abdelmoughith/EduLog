@@ -7,10 +7,6 @@
         android:icon="@drawable/ic_homework"
         android:title="@string/title_homework" />
 
-    <item
-        android:id="@+id/navigation_add"
-        android:icon="@drawable/ic_addbox"
-        android:title="@string/title_addbox" />
 
 
     <item

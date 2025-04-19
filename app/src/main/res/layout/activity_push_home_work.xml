@@ -151,7 +151,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Push exel file as marks\nColumns: first_name,last_name, mark\nStudents names must match the list given to the database."
+                    android:text="@string/note_select"
                     android:textStyle="italic"
                     android:textSize="15sp"
                     android:layout_gravity="end"

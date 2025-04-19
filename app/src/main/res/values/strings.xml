@@ -31,4 +31,5 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="note_select">"Select exel file as marks\nColumns: first_name,last_name, mark\nStudents names must match the list given to the database.\nNote: if you make any mistake you can push another file and the system will override the content."</string>
 </resources>

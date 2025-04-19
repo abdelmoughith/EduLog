@@ -59,15 +59,6 @@ public class SubjectDetailActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.fragment);
         NavigationUI.setupWithNavController(navView, navController);
-        navView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.navigation_add) {
-                // Start the New Activity
-                Intent intent2 = new Intent(SubjectDetailActivity.this, CreateHWActivity.class);
-                startActivity(intent2);
-                return false; // Return false to prevent fragment change
-            }
-            return NavigationUI.onNavDestinationSelected(item, Navigation.findNavController(this, R.id.fragment));
-        });
     }
     private void customStatusBar() {
         // Set status bar background color to green

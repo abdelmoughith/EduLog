@@ -15,6 +15,9 @@
         android:theme="@style/Theme.EduLog"
         tools:targetApi="31">
         <activity
+            android:name=".ui.pushMark.PushMarkActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.pushhomework.PushHomeWorkActivity"
             android:exported="false" />
         <activity
